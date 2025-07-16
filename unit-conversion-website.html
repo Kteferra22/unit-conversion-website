@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Conversions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f4f8
+        }
+        header {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+        figure {
+            text-align: center;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto; 
+            border-radius: 10px;
+        }
+        aside {
+            background-color: #e0f7fa;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        button {
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: backgorund-color 0.3s ease;
+        }
+        button:hover{
+            background-color: #0277bd;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        #go-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #go-home img {
+            width: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section id="home">
+        <header><b>Unit Conversions</b></header>
+        <nav>
+            <a href="#temperature"><button>Temperature</button></a>
+            <a href="#weight"><button>Weight</button></a>
+            <a href="#distance"><button>Distance</button></a>
+        </nav>
+    </section>
+
+    <div id="all-conversion-sections">
+        <section id="temperature">
+            <div class="converter box">
+                <figure>
+                    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" width="200px"/>
+                    <figcaption>Celsius to Fahrenheit Conversion</figcaption>
+                </figure>
+
+                <article>
+                    <aside>
+                        To convert Celsius to Fahrenheit yourself, use this formula replacing the `C` with your temperature in Celsius: (C × 9/5) + 32
+                    </aside>
+
+                    <fieldset>
+                        <legend>Temperature</legend>
+                        <label for="celsius">Celsius</label><br/>
+                        <input type="number" id="celsius"/><br/>
+                        <button id="convertTemperature" type="button">Convert</button><br/>
+                        <label for="fahrenheit">Fahrenheit</label><br/>
+                        <input type="number" id="fahrenheit" readonly/><br/>
+                    </fieldset>
+                </article>
+            </div>
+        </section>
+
+        <section id="weight">
+            <figure>
+                <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png" width="200px"/>
+                <figcaption>Kilograms to Pound Conversion</figcaption>
+            </figure>
+
+            <article>
+                <fieldset>
+                    <legend>Weight</legend>
+                    <label for="kilograms">Kilograms</label><br/>
+                    <input type="number" id="kilograms"><br/>
+                    <button id="convertWeight">Convert</button><br/>
+                    <label for="pounds">Pounds</label><br/>
+                    <input type="number" id="pounds" readonly><br/>
+                </fieldset>
+            </article>
+            <aside>
+                To convert kilograms to pounds yourself, use this formula replacing the `kg` with your weight in kilograms: kg x 2.205
+            </aside>
+        </section>
+
+        <section id="distance">
+            <figure>
+                <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png" width="200px"/>
+                <figcaption>Kilometer to Mile Conversion</figcaption>
+            </figure>
+
+            <article>
+                <fieldset>
+                    <legend>Distance</legend>
+                    <label for="kilometers">Kilometers</label><br/>
+                    <input type="number" id="kilometers"><br/>
+                    <button id="convertDistance">Convert</button><br/>
+                    <label for="miles">Miles</label><br/>
+                    <input type="number" id="miles" readonly><br/>
+                </fieldset>
+            </article>
+            <aside>
+                To convert kilometers to miles yourself, use this formula replacing the `km` with your distance in kilometers: km ÷ 1.609
+            </aside>   
+        </section>
+    </div>
+
+    <div id="go-home">
+        <a href="#home">
+            <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg" alt="Home" />
+        </a>
+    </div>
+    <footer>Learn more about HTML as a part of the IBM Fullstack Cloud Developer Certification</footer>
+<script>
+    // Temperature conversion: Celsius to Fahrenheit
+    document.getElementById('convertTemperature').addEventListener('click', function() {
+        const celsius = parseFloat(document.getElementById('celsius').value);
+        if (!isNaN(celsius)) {
+            const fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById('fahrenheit').value = fahrenheit.toFixed(2);
+        } else {
+            alert('Please enter a valid number for Celsius');
+        }
+    });
+
+    // Weight conversion: Kilograms to Pounds
+    document.getElementById('convertWeight').addEventListener('click', function() {
+        const kilograms = parseFloat(document.getElementById('kilograms').value);
+        if (!isNaN(kilograms)) {
+            const pounds = kilograms * 2.205;
+            document.getElementById('pounds').value = pounds.toFixed(2);
+        } else {
+            alert('Please enter a valid number for Kilograms');
+        }
+    });
+
+    // Distance conversion: Kilometers to Miles 
+    document.getElementById('convertDistance').addEventListener('click', function() {
+        const kilometers = parseFloat(document.getElementById('kilometers').value);
+        if (!isNaN(kilometers)) {
+            const miles = kilometers / 1.609;
+            document.getElementById('miles').value = miles.toFixed(2);
+        } else {
+            alert('Please enter a valid number for Kilometers');
+        }
+    });
+</script>
+
+</body>
+</html>
