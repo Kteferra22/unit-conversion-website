@@ -1,51 +1,36 @@
 🌐 Unit Converter Web App
-This HTML/CSS/JavaScript project is a simple web-based tool for converting units of temperature, weight, and distance. Users can easily switch between Celsius and Fahrenheit, kilograms and pounds, and kilometers and miles.
 
-🔧 Features
-Responsive, clean web interface
+A simple web app for converting **temperature, weight, and distance** using **HTML, CSS, and JavaScript**.  
+Convert between 🌡️ Celsius ↔ Fahrenheit, ⚖️ Kilograms ↔ Pounds, and 🛣️ Kilometers ↔ Miles.
 
-Converts:
-🌡️ Celsius → Fahrenheit
-⚖️ Kilograms → Pounds
-🛣️ Kilometers → Miles
+---
 
-Semantic HTML5 structure with images and captions
+## 🚀 Live Demo  
+👉 [Try it here](https://Kteferra22.github.io/unit-converter/)  
 
-Vanilla JavaScript for real-time conversion logic
+---
 
-User-friendly design with buttons, navigation, and input validation
+## ✨ Features
+- Responsive, clean UI  
+- Quick conversions: Temperature, Weight, Distance  
+- Real-time calculation with input validation  
+- Pure HTML, CSS, and Vanilla JS  
 
-🧪 Example Conversion Formulas
-🌡️ Temperature:
-Fahrenheit = (Celsius × 9/5) + 32
-⚖️ Weight:
-Pounds = Kilograms × 2.205
-🛣️ Distance:
-Miles = Kilometers ÷ 1.609
+---
 
-🚀 Getting Started
-Prerequisites
-A modern web browser (Chrome, Firefox, Edge, Safari, etc.)
+## 🧪 Conversion Formulas
+- 🌡️ `(C × 9/5) + 32 = F`  
+- ⚖️ `kg × 2.205 = lb`  
+- 🛣️ `km ÷ 1.609 = mi`  
 
-Open index.html in your web browser.
+---
 
-Use the navigation buttons to choose the conversion type.
+## 🛠️ Tech Stack
+- HTML5  
+- CSS3  
+- JavaScript  
 
-Enter a value and click Convert to see the result.
+---
 
-🗃️ Technologies Used
-HTML5
-CSS3
-JavaScript (vanilla)
-
-🧩 Sample UI Sections
-Temperature Converter: Image, formula reminder, and conversion form
-Weight Converter: Image, formula reminder, and conversion form
-Distance Converter: Image, formula reminder, and conversion form
-Navigation: Links to each section with styled buttons
-
-
-📌 Notes
-This is a learning project with minimal dependencies.
-Images are linked from public URLs. You can replace them with local files if needed.
-No frameworks are used—just pure HTML, CSS, and JavaScript for easy customization and learning.
+## 👤 Author
+**Kidus Teferra**
