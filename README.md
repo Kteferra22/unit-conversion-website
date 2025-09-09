@@ -6,7 +6,7 @@ Convert between 🌡️ Celsius ↔ Fahrenheit, ⚖️ Kilograms ↔ Pounds, and
 ---
 
 ## 🚀 Live Demo  
-👉 [Try it here](https://Kteferra22.github.io/unit-converter/)  
+👉 [Try it here](https://Kteferra22.github.io/unit-conversion-website/)  
 
 ---
 
